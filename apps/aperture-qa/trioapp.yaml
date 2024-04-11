@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-trioapp-qa
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd.argoproj.io/manifest-generate-paths: /manifests/trio-app/aperture-qa
+spec:
+  destination:
+    name: 'in-cluster'
+    namespace: demo-ta-qa
+  source:
+    path: manifests/trio-app/aperture-qa
+    repoURL: 'https://github.com/NimRegev/DevOps'
+    targetRevision: main
+    # plugin:
+    #   name: kustomize-build-with-helm
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      # - ServerSideApply=true
