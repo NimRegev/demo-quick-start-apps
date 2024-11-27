@@ -6,7 +6,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
   annotations:
     argocd.argoproj.io/manifest-generate-paths: /manifests/trio-app/aperture-dev
-    codefresh.io/product: demo-trio
+    codefresh.io/product: demo-trioapp
 spec:
   destination:
     name: 'demo-dev'
