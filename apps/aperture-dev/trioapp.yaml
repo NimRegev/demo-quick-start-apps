@@ -8,7 +8,7 @@ metadata:
     argocd.argoproj.io/manifest-generate-paths: /manifests/trio-app/aperture-dev
 spec:
   destination:
-    name: 'in-cluster'
+    name: 'demo-dev'
     namespace: demo-ta-dev
   source:
     path: manifests/trio-app/aperture-dev
