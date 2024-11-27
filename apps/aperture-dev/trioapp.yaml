@@ -12,7 +12,7 @@ spec:
     namespace: demo-ta-dev
   source:
     path: manifests/trio-app/aperture-dev
-    repoURL: 'https://github.com/NimRegev/DevOps'
+    repoURL: 'https://github.com/aperture-sci/DevOps'
     targetRevision: main
     # plugin:
     #   name: kustomize-build-with-helm

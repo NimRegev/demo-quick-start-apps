@@ -3,13 +3,13 @@ kind: Application
 metadata:
   name: demo-trioapp-prod
   annotations:
-    argocd.argoproj.io/manifest-generate-paths: /manifests/trio-app/aperture-prod
+    argocd.argoproj.io/manifest-generate-paths: /manifests/trio-app/aperture-prod-east
     codefresh.io/product: demo-trioapp
 spec:
   project: default
   source:
-    path: manifests/trio-app/aperture-prod
-    repoURL: https://github.com/NimRegev/DevOps
+    path: manifests/trio-app/aperture-prod-east
+    repoURL: https://github.com/aperture-sci/DevOps
     targetRevision: main
   destination:
     name: in-cluster
