@@ -9,10 +9,10 @@ spec:
   project: default
   source:
     path: manifests/trio-app/aperture-prod-east
-    repoURL: https://github.com/aperture-sci/DevOps
+    repoURL: https://github.com/NimRegev/DevOps.git
     targetRevision: main
   destination:
-    name: demo-east
+    name: in-cluster
     namespace: demo-ta-prod
   syncPolicy:
     automated:
