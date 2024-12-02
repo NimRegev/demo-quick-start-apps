@@ -2,26 +2,29 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: demo-trioapp-qa
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
   annotations:
     argocd.argoproj.io/manifest-generate-paths: /manifests/trio-app/aperture-qa
     codefresh.io/product: demo-trioapp
 spec:
-  destination:
-    name: 'demo-qa'
-    namespace: demo-ta-qa
+  project: default
   source:
     path: manifests/trio-app/aperture-qa
-    repoURL: 'https://github.com/aperture-sci/DevOps'
+    repoURL: https://github.com/NimRegev/DevOps.git
     targetRevision: main
-    # plugin:
-    #   name: kustomize-build-with-helm
-  project: default
+  destination:
+    name: in-cluster
+    namespace: demo-ta-qa
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+      allowEmpty: false
     syncOptions:
+      - PrunePropagationPolicy=foreground
+      - Replace=false
+      - PruneLast=false
+      - Validate=true
       - CreateNamespace=true
-      # - ServerSideApply=true
+      - ApplyOutOfSyncOnly=false
+      - ServerSideApply=true
+      - RespectIgnoreDifferences=false
