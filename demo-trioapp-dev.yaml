@@ -7,7 +7,7 @@ metadata:
 spec:
   project: default
   source:
-    path: .
+    path: manifests/trio-app/aperture-dev
     repoURL: https://github.com/NimRegev/DevOps.git
     targetRevision: main
   destination:
