@@ -4,7 +4,6 @@ metadata:
   name: demo-trioapp-qa
   annotations:
     argocd.argoproj.io/manifest-generate-paths: /manifests/trio-app/aperture-qa
-    codefresh.io/product: demo-trioapp
 spec:
   project: default
   source:
