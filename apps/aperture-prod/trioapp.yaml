@@ -4,7 +4,7 @@ metadata:
   name: demo-trioapp-prod
   annotations:
     argocd.argoproj.io/manifest-generate-paths: /manifests/trio-app/aperture-prod-east
-
+    codefresh.io/product: demo-trioapp
 spec:
   project: default
   source:
