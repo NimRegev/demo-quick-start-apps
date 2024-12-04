@@ -9,7 +9,7 @@ metadata:
     codefresh.io/product: demo-trioapp
 spec:
   destination:
-    name: 'demo-staging'
+    name: 'in-cluster'
     namespace: demo-ta-staging
   source:
     path: manifests/trio-app/aperture-staging
