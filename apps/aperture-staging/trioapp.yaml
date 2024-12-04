@@ -13,7 +13,7 @@ spec:
     namespace: demo-ta-staging
   source:
     path: manifests/trio-app/aperture-staging
-    repoURL: 'https://github.com/aperture-sci/DevOps'
+    repoURL: `https://github.com/NimRegev/DevOps.git`
     targetRevision: main
     # plugin:
     #   name: kustomize-build-with-helm
