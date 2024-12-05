@@ -12,7 +12,7 @@ spec:
     targetRevision: main
   destination:
     name: in-cluster
-    namespace: demo-ta-dev
+    namespace: demo-dev
   syncPolicy:
     automated:
       prune: true
