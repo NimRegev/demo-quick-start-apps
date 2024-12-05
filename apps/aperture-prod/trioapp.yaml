@@ -13,7 +13,7 @@ spec:
     targetRevision: main
   destination:
     name: in-cluster
-    namespace: demo-ta-prod
+    namespace: demo-prod
   syncPolicy:
     automated:
       prune: true
